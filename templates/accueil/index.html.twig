@@ -1,0 +1,39 @@
+{% extends 'base3.html.twig' %}
+{% block stylesheets %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ asset("CSS/style.css")}}">
+{% endblock %}
+{% block body %}
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <div class="fakeimg" style="height:500px; width:900px;"><img class="im" src="{{ asset("img/machin1.PNG") }}"></div>
+     </div>
+    <div id="contact" class="card">
+       <h1 style="color:blue;">Contactez nous aux</h1>
+        <h2><i class="fa fa-phone" aria-hidden="true"></i> +221 768623263 || <i class="fa fa-phone " aria-hidden="true"></i> +221771597982</h2>
+        <h2><i class="fa fa-envelope" aria-hidden="true"></i> nbirame559@gmail.com</h2>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Espace Patron</h2>
+      <div class="fakeimg1" style="height:100px;"><a class="text1" href="{{path('app_login')}}">Se connecter</a></div>
+      <p>Cette page est réserver au patron de l'atelier.</p>
+    </div>
+    <div class="card">
+      <h3>Espace Employés</h3>
+      <div class="fakeimg1"><a class="text1" href="#">Employer</a></div>
+      <p>Je suis employer je me connecte.</p>
+    </div>
+    <div class="card">
+      <h3>Espace Client</h3>
+      <div class="fakeimg1"><a class="text1" href="{{path('sa_modele_index')}}">modéles</a></div>
+      <p>Viter les modéles existant.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+	<script src="{{ asset("JS/style.js") }}"></script>
+{% endblock %}
